@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #00033c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.card::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 500px;
+    background: linear-gradient(to left, #ff00fa, #00c4ff);
+    z-index: 5;
+    animation: efect 10s linear infinite;
+    -webkit-animation: efect 10s linear infinite;
+}
+@keyframes efect {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+.card::after {
+    content: "";
+    position: absolute;
+    background: #00033c;
+    inset: 2px;
+    border-radius: 10px;
+    z-index: 5;
+}
+.text {
+    position: relative;
+    color: #fff;
+    font-size: 4em;
+    font-family: 'JetBrains Mono';
+    z-index: 10;
+}
+
+
+
